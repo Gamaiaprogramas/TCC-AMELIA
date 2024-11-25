@@ -3,72 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>inicio</title>
     <link rel="stylesheet" href="../STYLES/inicio.css">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+
 </head>
 <body>
-    <nav>
-        <div class="usuario">
-            <img src="../PICS/site/usuario.webp">
-            <h1>Ola! <br> usuário</h1>
-        </div>
+    <header>
+        <a href="../PAGES/inicio.html">
+        <img src="../PICS/site/usuario.webp" alt="" class="logo-site">
+        </a>
+        <form action="" class="selecao">
+            <li value="dasd">Clubes</li>
+            <li>Seleções</li>
+            <li>Masculino</li>
+            <li>Feminino</li>
+        </form>
+        <div>
 
-        <div class="marca-nav">
-            <a href="">
-                <img src="../PICS/site/logo-sem-nome.png" alt="">
-            </a>
-        </div>
-
-
-        <div class="inicio-lateral"> 
-            <a href="">
-                <span class="material-symbols-outlined">shopping_cart</span>
-            </a>
-            <a href="">
-                <img src="../PICS/site/search icon.svg">
-            </a>
-        </div>
-    </nav>
-</body>
-    <main>
-        <div class="carousel">
-            
-            <div class="carousel-content">
-                <div class="slide active">Slide 1</div>
-                <div class="slide">Slide 2</div>
-                <div class="slide">Slide 3</div>
-            </div>
-        </div>
-
-        <div class="cards">
-            <h1>Algum dos nossos produtos!</h1>
-            <br>
-            <div class="cards-container">
-                <div>
-                    <a href=""><img src="../PICS/site/teste.webp" alt=""></a>
-                </div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-            </div>
-        </div>
         
-        <div class="camisa-div">
-            <h1>Camisetas</h1>
-        </div>
-
-    </main>
-
-
-    <script src="../JS/inicio.js"></script>
-    </body>
+        <form action="pesquisar.act.php" class="pesquisa" method="GET">
+            <input  class="Pesquisar" type="text" name="termo" placeholder="Digite o nome da camisa ou time">
+            <input type="submit"class="material-symbols-outlined" value=" search" >
+        </form>
+        <img src="../PICS/site/usuario.webp" alt="">
+        <img src="../PICS/site/usuario.webp" alt="">
+    </div>
+    </header>
+</body>
 </html>
