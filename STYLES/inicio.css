@@ -41,22 +41,28 @@ header form li{
 }
 header div{
     display: flex;
+    gap: 3vh;
     align-items: center;
 }
 
 header div img{
     height: 8vh;
+    cursor: pointer;
 }
 
 .Pesquisar {
-    height: 5vh;
-    width: 30vh;
+    height: 6vh;
+    width: 40vh;
     border: none;
     background-color: gainsboro;
+    color: gray;
+    font-size: 2.3vh;
+    text-align: center;
     
 }
 .Pesquisar::placeholder{
     color: gray;
+    font-size: 2.3vh;
 }
 
 .pesquisa{
@@ -64,7 +70,9 @@ header div img{
     align-items: center;
     height: 100%;
 }
-
+.Pesquisar:active{
+    border: none;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -74,15 +82,83 @@ header div img{
   'opsz' 24;
   color: #ffc300;
   
-  height: 5vh;
+  height: 6vh;
   border: none;
   background-color: gainsboro;
   cursor: pointer;
 }
 
-
 .logo-site{
     height: 9.5vh;
+}
+
+.primeiroBanner{
+    width: 100%;
+    height: 87vh;
+    display: flex;
+    background-size: 210vh 86.7vh;
+    background-image: url(../PICS/imgsMantos/imgHeader.png);
+    background-color: blueviolet;
+}
+
+.primeiroBanner div{
+   
+    height: 100%;
+    width: 50%;
+}
+.primeiroBanner div div{
+    height: 50%;
+    width: 100%;
+   
+}
+
+.divConteudoConteudo{
+    
+  
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-around;
+    padding: 0 10vh;
+
+}
+.divConteudoConteudo *{
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+       font-optical-sizing: auto;
+}
+
+.divConteudoConteudo h1{
+    font-weight: 700;
+    color: #ffc300;
+}
+.divConteudoConteudo h2{
+    font-weight: 500;
+    color: #a6a6a6;
+    text-wrap: wrap;
+    width: 60vh;
+}
+.divConteudoConteudo button{
+    height: 7vh;
+    width: 14vw;
+    font-size: 2.5vh;
+    border: none;
+    box-shadow: 1vh 1vh 0 black;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.divConteudoConteudo button:hover{
+    transform: translateX(1vh) translateY(1vh);
+    box-shadow: none;
+}
+
+.divConteudoConteudo section{
+
+    height: 10%;
 }
 
 body{
