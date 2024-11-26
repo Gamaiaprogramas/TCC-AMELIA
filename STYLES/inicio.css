@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
 }
 header{
     display: flex;
@@ -160,6 +161,67 @@ header div img{
 
     height: 10%;
 }
+
+
+.Camisa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 0;
+    gap: 2vh;
+}
+
+.Titulo1{
+    background-color: #ffc300;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    
+}
+.Titulo1 h1{
+    font-weight: 900;
+    color: #001d5b;
+
+}
+
+.espacoCamisa{
+    width: 100%;
+    background-color: #ffc300;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.espacoBtnEsquerda, .espacoBtnDireita{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.espacoBtnEsquerda button , .espacoBtnDireita button{
+    background-color: transparent;
+    cursor: pointer;
+    height: 5vh;
+    width: 5vh;
+    transition: 0.2s;
+    border: solid black 0.5vh;
+    font-size: 2vh;
+   
+}
+.espacoBtnEsquerda button:hover , .espacoBtnDireita button:hover{
+ transform: scale(1.1);
+}
+.containerCamisa{
+    display: flex;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    scroll-behavior: smooth;
+    width: 80%;
+}
+
+
 
 body{
     background-color: aqua;
