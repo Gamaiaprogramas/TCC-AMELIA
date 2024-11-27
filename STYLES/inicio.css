@@ -15,6 +15,30 @@ header{
     background-color: #fff;
     align-items: center;    
 }
+
+.carousel {
+    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+
+
+}
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    
+    align-items: center;
+    
+    box-sizing: border-box;
+    
+}
+
+
 .selecao{
     display: flex;
     justify-content: space-around;
@@ -180,6 +204,19 @@ header div img{
     height: 10vh;
     
 }
+.Titulo2{
+    background-color: #001d5b;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.Titulo2 h1{
+    font-weight: 900;
+    color: #ffc300;
+}
 .Titulo1 h1{
     font-weight: 900;
     color: #001d5b;
@@ -188,8 +225,9 @@ header div img{
 
 .espacoCamisa{
     width: 100%;
-    background-color: #ffc300;
+
     justify-content: center;
+    
     display: flex;
     align-items: center;
 }
@@ -216,13 +254,209 @@ header div img{
 }
 .containerCamisa{
     display: flex;
-    overflow-x: auto; /* Permite rolagem horizontal */
+    overflow-y: hidden;
+    overflow-x: hidden; /* Permite rolagem horizontal */
     scroll-behavior: smooth;
     width: 80%;
+    height: auto;
+    gap: 0 10vh;
+    justify-content: space-around;
+}
+
+.camisaDivimg{
+    display: flex;
+    
+    flex-direction: column;
+}
+.camisaDivimg img{
+    height:50vh;
+    
+    width: 40vh;
+}
+
+.camisaDivimg h1{
+    position: fixed;
+    margin-top: 44.5vh;
+    padding: 1vh;
+    font-size: 3.1vh;
+    background-color: #ffc300;
+    color: #001d5b;
+}
+
+.containerCamisaUnico{
+    background-color: #a6a6a6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    width: 40vh;
+}
+
+.camisaTexto{
+    display: flex;
+    flex-direction: column;
+    border: #a6a6a6 solid 0.4vh;
+    border-top: none;
+
+    justify-content: space-around;
+    height: 17vh;
+    background-color: #fff;
+    align-items: center;
+}
+
+.camisaTexto h1{
+    color: #11388d;
+    font-size: 2.8vh;
+    margin-left: 1vh;
+}
+
+.camisaTexto button {
+    font-size: 3.4vh;
+    background-color: #fff;
+    border: solid black 0.4vh;
+    padding: 1vh;
+    cursor: pointer;
+    font-weight: 600;
+}   
+
+.camisaTexto button:hover{
+    border: solid #001d5b 0.4vh;
+    color: #001d5b;
 }
 
 
+.imgCarrosel1{
+    display: flex;
+    background-image: url(../PICS/imgsMantos/img1carrosel.png);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: 230vh 90vh;
+}
+.imgCarrosel2{
+    display: flex;
+    background-image: url(../PICS/imgsMantos/img2carrosel.png);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: 230vh 90vh;
+}
 
-body{
-    background-color: aqua;
+
+.imgCarrosel1 div{
+   height: 100%;
+   width: 50%;
+
+}
+.Top div{
+    height: 50%;
+    display: flex;
+    width: 100%;
+ 
+    flex-direction: column;
+}
+
+.car1{
+    display: flex;
+    align-items: start;
+    gap: 2vh;
+   padding-left: 36vh;
+}
+
+.car1 > h1{
+    font-weight: 600;
+    color: #ffc300;
+    font-size: 6vh;
+    width: 70vh;
+}
+
+.car1 > h2{
+    color: #c2c2c2;
+    flex-wrap: wrap;
+    width: 35vh;
+    font-size: 3vh;
+    font-weight: 200;
+}
+
+.car2{
+    display: flex;
+    align-items: start;
+    gap: 2vh;
+    padding-left: 10vh;
+}
+.car2 > h1{
+    font-weight: 600;
+    color: #ffc300;
+    font-size: 6vh;
+    width: 70vh;
+}
+.car2 > h2{
+    color: #c2c2c2;
+    flex-wrap: wrap;
+    width: 35vh;
+    font-size: 3vh;
+    font-weight: 200;
+}
+.imgCarrosel3{
+    display: flex;
+    background-image: url(../PICS/imgsMantos/img3carrosel.png);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: 230vh 90vh;
+    align-items: center;
+    justify-content: center;
+}
+.imgCarrosel3 h1{
+    font-weight: 600;
+    color: #ffc300;
+    font-size: 6vh;
+    width: 70vh;
+}
+.imgCarrosel3 h2{
+    color: #c2c2c2;
+    flex-wrap: wrap;
+    width: 35vh;
+    font-size: 3vh;
+    font-weight: 200;
+}
+
+.imgCarrosel4 {
+    display: flex;
+    background-image: url(../PICS/imgsMantos/img4carrosel.png);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: 230vh 90vh;
+}
+
+footer{
+    background-color: #001d5b;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    align-items: center;
+    justify-content: space-around;
+}
+footer div{
+   
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer div svg{ 
+    border: #ffc300 solid  0.5vh;
+    height: 10vh;
+    cursor: pointer;
+    border-radius: 10vh;
+    width: 10vh;
+    padding: 1vh;
+}
+.linha{
+    height: 0.1vh;
+    background-color: #ffc300;
+    width: 70vh;
+}
+footer h1{
+    font-weight: 700;
+    font-size: 5vh;
+    color: #ffc300;
 }

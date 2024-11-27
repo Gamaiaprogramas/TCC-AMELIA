@@ -10,5 +10,5 @@ function autoSlide() {
     carouselContent.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
-// Muda de slide a cada 3 segundos
-setInterval(autoSlide, 3000);
+// Iniciar o carrossel automaticamente
+setInterval(autoSlide, 3000); // Tempo entre slides (3 segundos)
