@@ -1,21 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
-}
-header{
+.primeiroBanner{
+    width: 100%;
+    height: 87vh;
     display: flex;
-    justify-content: space-between;
-    padding: 0 5vh;
-    height: 13vh;
-    background-color: #fff;
-    align-items: center;    
+    background-size: 210vh 86.7vh;
+    background-image: url(../PICS/imgsMantos/imgHeader.png);
+    background-color: blueviolet;
 }
-
 .carousel {
     
     width: 100%;
@@ -29,103 +21,6 @@ header{
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
-.slide {
-    min-width: 100%;
-    
-    align-items: center;
-    
-    box-sizing: border-box;
-    
-}
-
-
-.selecao{
-    display: flex;
-    justify-content: space-around;
-    
-    height: 100%;
-    align-items: center;
-    width: 50vw;
-}
-.selecao li{
-    color:#001d5b ;
-    font-size: 4vh;
-  
-}
-
-header *{
-     list-style: none;
- font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    
-}
-
-header form li{
-   cursor: pointer;
-    font-weight: 700;
-}
-header div{
-    display: flex;
-    gap: 3vh;
-    align-items: center;
-}
-
-header div img{
-    height: 8vh;
-    cursor: pointer;
-}
-
-.Pesquisar {
-    height: 6vh;
-    width: 40vh;
-    border: none;
-    background-color: gainsboro;
-    color: gray;
-    font-size: 2.3vh;
-    text-align: center;
-    
-}
-.Pesquisar::placeholder{
-    color: gray;
-    font-size: 2.3vh;
-}
-
-.pesquisa{
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-.Pesquisar:active{
-    border: none;
-}
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 800,
-  'GRAD' 0,
-  'color' 
-  'opsz' 24;
-  color: #ffc300;
-  
-  height: 6vh;
-  border: none;
-  background-color: gainsboro;
-  cursor: pointer;
-}
-
-.logo-site{
-    height: 9.5vh;
-}
-
-.primeiroBanner{
-    width: 100%;
-    height: 87vh;
-    display: flex;
-    background-size: 210vh 86.7vh;
-    background-image: url(../PICS/imgsMantos/imgHeader.png);
-    background-color: blueviolet;
-}
-
 .primeiroBanner div{
    
     height: 100%;
