@@ -24,7 +24,7 @@
                 header($destinoADM);
             } else {
 
-                $destino = "location:Usuario.php";
+                $destino = "location:../PAGES/inicio.php";
                 header($destino);
     
             }

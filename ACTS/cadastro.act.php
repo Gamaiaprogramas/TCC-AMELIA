@@ -9,7 +9,8 @@ $msg = "";
 $destino = "location:login.php";
 $busca = mysqli_query($con,"Select `email` from `registro` where `email` = '$email'");
 if($busca->num_rows == 0){ 
-    $path = "fotosClientes/" . md5(time()) . ".jpg";
+    $path = "../PICS/fotosClientes/" . md5(time()) . ".jpg";
+
     move_uploaded_file($foto['tmp_name'], $path);
     if ($txtSenha1 == $txtSenha2) {
         $senha = md5($senha1);

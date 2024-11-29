@@ -18,7 +18,7 @@ require("../ACTS/connect.php");
 </head>
 <body>
     <header>
-        <a href="../PAGES/inicio.html">
+        <a href="../PAGES/inicio.php">
         <img src="../PICS/imgsMantos/logoPequena.svg" alt="" class="logo-site">
         </a>
         <form action="" class="selecao">
@@ -34,7 +34,7 @@ require("../ACTS/connect.php");
             <input  class="Pesquisar" type="text" name="termo" placeholder="O que você procura...?">
             <input type="submit"class="material-symbols-outlined" value=" search" >
         </form>
-        <a href="">
+        <a href="../ColocaArquivoDeSegurança">
 
             <img src="<?php 
 
@@ -43,6 +43,7 @@ if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
 }else {
     echo "../PICS/imgsMantos/imgCarrinho.svg";
 }
+
             ?>" alt="">
         </a>
         <a href="">

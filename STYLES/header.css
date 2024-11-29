@@ -60,6 +60,8 @@ header div{
 
 header div img{
     height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
     cursor: pointer;
 }
 
