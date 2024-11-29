@@ -6,7 +6,7 @@
     display: flex;
     background-size: 210vh 86.7vh;
     background-image: url(../PICS/imgsMantos/imgHeader.png);
-    background-color: blueviolet;
+
 }
 .carousel {
     
@@ -321,3 +321,6 @@
     background-size: 230vh 90vh;
 }
 
+a{
+    text-decoration: none;
+}

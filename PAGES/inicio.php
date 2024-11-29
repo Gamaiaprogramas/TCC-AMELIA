@@ -38,7 +38,7 @@ include("../PARTIALS/header.php");
   while($produto = mysqli_fetch_assoc($produtos)) {
 
 
-                   echo "<div class='containerCamisaUnico'>";
+                   echo "<a href='../PAGES/mostrarProd.php?cod={$produto['codProduto']}'><div class='containerCamisaUnico'>";
                     echo "<div class='camisaDivimg'>";
                        echo " <img src='{$produto['fotoProduto']}' alt=''>";
                        echo " <h1>{$produto['precoProduto']}</h1>";
@@ -47,7 +47,7 @@ include("../PARTIALS/header.php");
                    echo " <h1>{$produto['nomeCamisa']} - {$produto['timeProduto']}</h1>";
                    echo " <button>Adicionar ao carrinho</button> ";
                    echo " </div> ";
-                echo " </div>";
+                echo " </div></a>";
 
 
                 }
