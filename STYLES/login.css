@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+       font-optical-sizing: auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgMantos{
+    display: flex;
+    height: 30vh;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+}
+form{
+    height: 70vh;
+    padding: 4vh 0 0 0 ;
+
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DivForm{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    height: 35vh;
+    padding: 2vh 4vh;
+    width: 70vh;
+    border-radius: 1vh;
+    gap: 3vh;
+}
+.DivForm label{
+    gap: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.DivForm > label > p{
+    color: #ffc300;
+    font-size:4vh ;
+    font-weight: 500;
+}
+.DivForm label input{
+    width: 60vh;
+    height: 4vh;
+    border: solid 0.3vh #003566;
+    border-radius: 0.4vh;
+    font-size: 2.3vh;
+    color: #003566;
+}
+.top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+.top input{
+    font-weight: 700;
+    color: #f8f9fa;
+    background-color: #003566;
+    width: 70vh;
+    height: 7vh;
+    border: none;
+    font-size: 3vh;
+    cursor: pointer;
+}
+.top h1{
+    color: #003566;
+    font-size: 1.6vh;
+    font-weight: 400;
+}
+.top a{
+    color: #003566;
+}

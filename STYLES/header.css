@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     padding: 0 5vh;
@@ -16,52 +16,85 @@ header{
     align-items: center;    
 }
 
-
 .slide {
     min-width: 100%;
-    
     align-items: center;
-    
     box-sizing: border-box;
-    
 }
 
-
-.selecao{
+.selecao ul {
     display: flex;
     justify-content: space-around;
-    
-    height: 100%;
+    width: 100%; /* Alterado para garantir que ocupe toda a largura disponível */
+}
+
+.selecao {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    width: 50vw;
+    width: 100%; /* Alterado para usar toda a largura disponível */
+
+    list-style: none;
 }
-.selecao li{
-    color:#001d5b ;
+
+.selecao li {
+    color: #001d5b;  /* Mudando para branco para contraste */
     font-size: 4vh;
-  
+    cursor: pointer;
+    position: relative;
+    padding: 0 2vh;  /* Adicionando espaçamento entre os itens */
 }
 
-header *{
-     list-style: none;
- font-family: "Raleway", sans-serif;
+.selecao .dropdown:hover .submenu {
+    display: block;
+}
+
+.selecao .submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Aparece logo abaixo do item */
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    width: 100%; /* Ajuste para ocupar toda a largura do item */
+}
+
+.selecao .submenu li {
+    padding: 10px;
+    font-size: 3vh;
+    color: #001d5b;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.selecao .submenu li:hover {
+    background-color: #e1e1e1;
+}
+section{
+    display: flex;
+}
+header * {
+    list-style: none;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
-    
 }
 
-header form li{
-   cursor: pointer;
+header .divForm li {
+    cursor: pointer;
     font-weight: 700;
 }
-header div{
+
+header div {
     display: flex;
     gap: 3vh;
     align-items: center;
 }
 
-header div img{
+header div img {
     height: 8vh;
-    width: 8vh;
-    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -73,36 +106,36 @@ header div img{
     color: gray;
     font-size: 2.3vh;
     text-align: center;
-    
 }
-.Pesquisar::placeholder{
+
+.Pesquisar::placeholder {
     color: gray;
     font-size: 2.3vh;
 }
 
-.pesquisa{
+.pesquisa {
     display: flex;
     align-items: center;
     height: 100%;
 }
-.Pesquisar:active{
+
+.Pesquisar:active {
     border: none;
 }
+
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 800,
-  'GRAD' 0,
-  'color' 
-  'opsz' 24;
-  color: #ffc300;
-  
-  height: 6vh;
-  border: none;
-  background-color: gainsboro;
-  cursor: pointer;
+    font-variation-settings: 
+        'FILL' 0, 
+        'wght' 800, 
+        'GRAD' 0, 
+        'opsz' 24;
+    color: #ffc300;
+    height: 6vh;
+    border: none;
+    background-color: gainsboro;
+    cursor: pointer;
 }
 
-.logo-site{
+.logo-site {
     height: 9.5vh;
 }

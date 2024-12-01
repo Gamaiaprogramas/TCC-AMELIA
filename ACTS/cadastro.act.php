@@ -19,8 +19,8 @@ if($busca->num_rows == 0){
     }
     if ($senha != "") {
 
-        if (mysqli_query($con, "INSERT INTO `registro` (`codigo`, `nome`, `email`,`cpf`,`sexo`, `telefone`, `nascto`,`time`, `senha`,`fotoUrl`) VALUES 
-        (NULL, '$nome', '$email','$cpf','$sexo','$telefone', '$nascto', '$time','$senha', '$path');")) {
+        if (mysqli_query($con, "INSERT INTO `registro` (`codigo`, `nome`, `email`,`cpf`,`sexo`, `telefone`, `nascto`, `senha`,`fotoUrl`) VALUES 
+        (NULL, '$nome', '$email','$cpf','$sexo','$telefone', '$nascto','$senha', '$path');")) {
             $msg = "<p class=\"alerta green\">Registro Criado com sucesso!</p>";
             $destino = "location:../PAGES/login.php";
         } else {

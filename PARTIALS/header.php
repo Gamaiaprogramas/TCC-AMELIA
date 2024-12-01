@@ -18,19 +18,63 @@ require("../ACTS/connect.php");
 </head>
 <body>
     <header>
-        <a href="../PAGES/inicio.php">
+        <a href="../PAGES/inicio.php" >
         <img src="../PICS/imgsMantos/logoPequena.svg" alt="" class="logo-site">
         </a>
-        <form action="" class="selecao">
-            <li value="dasd">Clubes</li>
-            <li>Seleções</li>
-            <li>Masculino</li>
-            <li>Feminino</li>
-        </form>
+        <section>
+    <form action="../PAGES/pesquisar.php" name="termo"  class="selecao" method="GET">
+        <ul>
+            <li class="dropdown">
+                Clubes
+                <ul class="submenu">
+                    <li onclick="selecionarClube('Corinthians')">Corinthians</li>
+                    <li onclick="selecionarClube('Flamengo')">Flamengo</li>
+                    <li onclick="selecionarClube('Palmeiras')">Palmeiras</li>
+                    <li onclick="selecionarClube('São Paulo')">São Paulo</li>
+                </ul>
+                <input type="hidden" name ="termo" id="termoInput">
+            </li>
+
+            <li class="dropdown">
+                Seleções
+                <ul class="submenu">
+                    <li onclick="selecionarClube('Brasil')">Brasil</li>
+                    <li onclick="selecionarClube('Irlanda')">Irlanda</li>
+                    <li onclick="selecionarClube('Canada')">Canada</li>
+                    <li onclick="selecionarClube('Estados Unidos')">Estados Unidos</li>
+                </ul>
+                <input type="hidden" name="termo" id="termoInput">
+            </li>
+        </ul>
+    </form>
+
+    <form action="../PAGES/pesquisar.php" name="termo3" class="selecao" method="GET">
+    <ul>
+        <li onclick="selecionarTipo('Masculina')">Masculino</li>
+        <li onclick="selecionarTipo('Feminina')">Feminino</li>
+        <input type="hidden" name="termo3" id="termoInput">
+    </ul>
+</form>
+
+</section>
+    <script>
+    function selecionarClube(clube) {
+        document.getElementById('termoInput').value = clube;
+        document.forms['termo'].submit();
+    }
+
+    function selecionarTipo(tipo) {
+        // Atualiza o valor do input hidden
+        document.getElementById('termoInput').value = tipo;
+        // Submete o formulário
+        document.forms['termo3'].submit();
+    }
+</script>
+
         <div>
 
         
-        <form action="pesquisar.act.php" class="pesquisa" method="GET">
+        <form action="../PAGES/pesquisar.php" class="pesquisa" method="GET">
             <input  class="Pesquisar" type="text" name="termo" placeholder="O que você procura...?">
             <input type="submit"class="material-symbols-outlined" value=" search" >
         </form>

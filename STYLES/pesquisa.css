@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+    border: solid 0.4vh #003566;
+    border-radius: 1vh;
+    width: 80vh;
+    height: 40vh;
+    justify-content: space-around;
+    align-items: center;   
+}
+.container img{
+    height: 20vh;
+}
+.container div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    justify-content: space-around;
+
+}
+.container div h1{
+    font-size: 4vh;
+    color: #003566;
+}
+a{
+    text-decoration: none;
+}
+.container div h2{
+    font-size: 6vh;
+    color: #ffc300;
+}
+
+.container div p{
+    color: #003566;
+    font-size: 2vh;
+}
+
+.containerReal{
+
+    width: 100%;
+padding: 5vh;
+align-items: center;
+
+
+display: flex;
+
+}
+
+.nãoAchado{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+}
+.nãoAchado img{
+    height: 40vh;
+}
+.nãoAchado p{
+    font-size: 3vh;
+    color: #003566;
+    font-weight: 800;
+}
