@@ -63,9 +63,9 @@ include("../PARTIALS/header.php");
                 function direcao(e){
                     var direcao = document.querySelector(".containerCamisa");
                     if(e == 1){
-                        direcao.scrollLeft = direcao.scrollLeft - 1550;
+                        direcao.scrollLeft = direcao.scrollLeft - 1650;
                     }else if (e == 2){
-                        direcao.scrollLeft = direcao.scrollLeft + 1550;
+                        direcao.scrollLeft = direcao.scrollLeft + 1650;
                     }
                 }
                 </script>

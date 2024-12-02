@@ -45,7 +45,7 @@
 .divConteudoConteudo *{
     list-style: none;
     font-family: "Raleway", sans-serif;
-       font-optical-sizing: auto;
+    font-optical-sizing: auto;
 }
 
 .divConteudoConteudo h1{
@@ -122,7 +122,7 @@
     width: 100%;
 
     justify-content: center;
-    
+    scroll-behavior: smooth;
     display: flex;
     align-items: center;
 }
@@ -148,14 +148,16 @@
  transform: scale(1.1);
 }
 .containerCamisa{
+
     display: flex;
     overflow-y: hidden;
     overflow-x: hidden; /* Permite rolagem horizontal */
     scroll-behavior: smooth;
     width: 80%;
     height: auto;
-    gap: 0 10vh;
+    gap: 0 20vh;
     justify-content: space-around;
+    scroll-behavior: smooth;
 }
 
 .camisaDivimg{
