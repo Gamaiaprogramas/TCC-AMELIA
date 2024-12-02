@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body{
+    background-color: #f8f9fa;
+}
+.carrinhoDiv{
+    padding: 3vh 0 ;
+}
+.carrinhoDiv nav{
+    display: flex;
+    gap: 60vh;
+    background-color: white;
+    padding: 2vh 10vh;
+    align-items: center;
+}
+.carrinhoDiv nav a img{
+    height: 9vh;
+}
+.carrinhoDiv nav h2{
+    color: #ffc300;
+    font-weight: 700;
+    flex-wrap: nowrap;
+    font-size: 3vh;
+}
+
+.container{
+    display: flex;
+    border: solid 0.4vh #003566;
+    border-radius: 1vh;
+    background-color: white;
+    width: 80vh;
+    height: 40vh;
+    justify-content: space-around;
+    align-items: center;   
+}
+.container img{
+    height: 20vh;
+}
+
+.compra{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+.compra a button{
+    font-weight: 700;
+    color: #f8f9fa;
+    background-color: #003566;
+    width: 70vh;
+    height: 7vh;
+    border: none;
+    font-size: 3vh;
+    cursor: pointer;
+}
+.compra a p{
+    font-size: 2vh;
+    color: #003566;
+    text-decoration: underline;
+}
+
+.container div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    justify-content: space-around;
+
+}
+.container div a button{
+    font-size: 1.5vh;
+    cursor: pointer;
+    padding: 2vh 1vh;
+    border: none;
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #003566;
+}
+.container div h1{
+    font-size: 4vh;
+    color: #003566;
+}
+a{
+    text-decoration: none;
+}
+.container div h2{
+    font-size: 6vh;
+    color: #ffc300;
+}
+
+.container div p{
+    color: #003566;
+    font-size: 2vh;
+}
+
+.containerReal{
+
+    width: 100%;
+padding: 5vh;
+align-items: center;
+
+
+display: flex;
+
+}
+
+.nãoAchado{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+}
+.nãoAchado img{
+    height: 40vh;
+}
+.nãoAchado p{
+    font-size: 3vh;
+    color: #003566;
+    font-weight: 800;
+}

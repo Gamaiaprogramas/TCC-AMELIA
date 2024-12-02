@@ -90,7 +90,7 @@ if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
 
             ?>" alt="">
         </a>
-        <a href="">
+        <a href="../PAGES/carrinho.php">
             <img src="../PICS/imgsMantos/imgBonecoLogin.svg" alt="">
         </a>
     </div>
