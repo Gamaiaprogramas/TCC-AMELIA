@@ -78,7 +78,15 @@ require("../ACTS/connect.php");
             <input  class="Pesquisar" type="text" name="termo" placeholder="O que você procura...?">
             <input type="submit"class="material-symbols-outlined" value=" search" >
         </form>
-        <a href="../ColocaArquivoDeSegurança">
+        <a href="<?php 
+
+if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
+    echo "../PAGES/perfil.php";
+}else {
+    echo "../PAGES/login.php";
+}
+
+            ?>">
 
             <img src="<?php 
 

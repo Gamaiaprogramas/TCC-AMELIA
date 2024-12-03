@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+nav{
+    display: flex;
+    height: 20vh;
+    position: fixed;
+    width: 100%;
+    background-color: #001d5b;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    font-size: 5vh;
+    color: white;
+}
+nav ul li h1{
+    font-size: 5vh;
+    font-weight: 900;
+    margin-left: 33vh;
+    color: white;
+}
+main {
+    padding: 30vh 0 ;
+    gap: 5VH;
+    display: flex;
+    background-image: url(../PICS/imgsMantos/logoAlternativa.svg);
+    align-items:center ;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50vh;
+    justify-content: space-around;    
+}
+.cardUnico{
+    background-color: white;
+    box-shadow: 0.5vh 0.5vh 3vh black;
+    display: flex;
+    height: 80vh;
+    width: 140vh;
+    border-radius: 3vh;
+    border: solid 0.5vh #001d5b;
+    padding: 3vh;
+}
+.cardUnico img{
+    height: 100%;
+}
+.direita{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:75vh;
+    width: 60vh;
+}
+
+.infoProd{
+
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.infoProd h1{
+    color: #001d5b;
+    font-size: 6vh;
+}
+.infoProd p {
+    text-wrap: wrap;
+    color: #001d5b;
+    font-size: 3vh;
+
+}
+
+.infoProd h2{
+    font-size: 5vh;
+    color: #001d5b;
+}
+
+.Acao{
+    display: flex;
+    align-items: center;
+   gap: 10vh;
+}
+.Acao img{
+    height: 10vh;
+}
