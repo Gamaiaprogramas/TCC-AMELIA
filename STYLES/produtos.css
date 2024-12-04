@@ -1,0 +1,94 @@
+header {
+  background-color: #333; /* Cor de fundo opcional */
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Distribui os itens no canto esquerdo, centro e direito */
+  align-items: center; /* Alinha verticalmente */
+  list-style: none; /* Remove as bolinhas padrão das listas */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo dos itens do header */
+.header li {
+  display: flex;
+  align-items: center;
+}
+
+.logo img,
+.perfil img {
+  width: 50px; /* Ajuste do tamanho da imagem */
+  height: 50px;
+  border-radius: 50%; /* Deixa as imagens redondas */
+  object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+.meus-produtos input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px; /* Largura do campo de texto */
+  font-size: 14px;
+}
+
+.meus-produtos {
+  flex: 1; /* Faz o item do meio ocupar espaço central */
+  display: flex;
+  justify-content: center; /* Centraliza o input */
+}
+
+    .carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 25%; /* Mostra 4 itens de uma vez */
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
