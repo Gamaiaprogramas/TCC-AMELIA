@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-Perfil{
+    background-color: #f8f9fa !important;
+    margin-top: 1.5vw;
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 63vw;
+    border-radius: .5%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    color: #10002b;
+    font-size: 1vw;
+}
+
+.titulo a{
+    color: #ffc300;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    box-shadow: black 1px 0px 8px;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    margin-left: 2vw;
+}
+
+.fotoUsuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+.miniaturaPerf{
+    margin-top: 50%;
+    height: 22vw;
+    width: 20vw;
+}
+
+.plano{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1vw;
+    font-size: 1vw;
+    height: 40%;
+    width: 100%;
+}
+
+.texto{
+    font-size: 1vw;
+}
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 60%;
+    margin-top: 2vw;
+    gap: .5vw;
+}
+
+.nomes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 15%;
+    color: #001d5b;
+    font-size: 1.2vw;
+}
+
+.phps{
+    display: flex;
+    color: black;
+    font-size: 1vw;
+    border-radius: 0.5vw;
+    background-color: #e9ecef;
+    padding: 1%;
+}
+
+.editar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+.editar a:hover{
+    transition: ease 0.5s;
+    background-color: #001d5b;
+    color: #ffc300;
+}
+
+.btnEdit a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.3vw;
+    width: 6vw;
+    font-size: 1vw;
+    border-radius: 2vw;
+    text-decoration: none;
+    color: #10002b;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+}
+
+.btnAnalise{
+    display: flex;
+    width: 20vh;
+    height: 3vw;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1.1vw;
+    background-color: #001d5b;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    margin-bottom: 0.5vw;
+    text-decoration: none;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+.btnAnalise a {
+    color: #ffc300;
+    text-decoration: none;
+}
+.btnAnalise:hover a{
+    color: #ffc400;
+}
