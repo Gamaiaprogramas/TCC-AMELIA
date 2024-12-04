@@ -53,7 +53,7 @@
                     <?php if($_SESSION['sexo'] == "opcao1"){
                         echo "Masculino";
                     }else if($_SESSION['sexo'] == "opcao2"){
-                        echo "Masculino";
+                        echo "Feminino";
                     }; ?>
                     </div>
                 </div>
