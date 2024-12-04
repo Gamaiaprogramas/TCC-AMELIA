@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-image: url(../PICS/imgsMantos/logoPequena.svg);
+    background-repeat: no-repeat;
+    background-size: 50vh;
+    background-position-x: -27vh;
+    background-position-y: 25vh;
+    align-items: center;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 1vh 10vh;
+    justify-content: center;
+
+}
+nav h1{
+    color: #ffc300;
+    font-size:5vh;
+}
+
+body{
+    background-image: url(../PICS/imgsMantos/logoAlternativa.svg);
+    background-repeat: no-repeat;
+    background-size: 50vh;
+    background-position-y: 25vh;
+    background-position-x: 153vh;
+}
+main form{
+
+    border: solid 0.3vh #003566;
+    border-radius: 1vh;
+    padding: 10vh;
+    justify-content: space-between;
+    
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    align-items: center;
+    width: 60%;
+    background-color: white;
+}
+main form label{
+   
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    width:  90%;
+}
+
+main form label p{
+    color: #ffc300;
+    font-weight: 600;
+    font-size: 1.5vh;
+}
+main form label input{
+    width: 100%;
+    background-color: white;
+    border: #003566 solid 0.3vh;
+    border-radius: 0.3vh;
+    color: #003566;
+    padding-left: 0.3vh;
+}
+main form img{
+     height: 24vh;
+     width: auto;
+}
+input[type = submit]{
+    background-color: #003566;
+    color: white;
+    font-size: 5vh;
+    border: none;
+    padding: 1vh;
+    cursor: pointer;
+}
+main form div{
+    display: flex;
+    gap: 1vh;
+    align-items: center;
+    flex-direction: column;
+}
+.select-box {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+.select-box:hover {
+    border-color: #007bff;
+}
+
+.select-box:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.select-box option {
+    padding: 10px;
+}
