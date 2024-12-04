@@ -2,14 +2,11 @@
     @session_start();
     include("../partials/header.php");
 
-  
 
-    // Conectar ao banco de dados
-    $conn = new mysqli('localhost', 'root', '', 'save'); // Ajuste conforme suas credenciais
-
-    if ($conn->connect_error) {
+    if ($con->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    @session_start();
 
 ?>
     <link rel="stylesheet" href="../STYLES/perfil.css">
@@ -48,12 +45,16 @@
                 </div>
                 <div class="nomes">Nascimento:
                     <div class="phps">
-
+                    <?php echo "$_SESSION[nascto]"; ?>
                     </div>
                 </div>
                 <div class="nomes">Gênero: 
                     <div class="phps">
-                    <?php echo "$_SESSION[genero]"; ?>
+                    <?php if($_SESSION['sexo'] == "opcao1"){
+                        echo "Masculino";
+                    }else if($_SESSION['sexo'] == "opcao2"){
+                        echo "Masculino";
+                    }; ?>
                     </div>
                 </div>
 

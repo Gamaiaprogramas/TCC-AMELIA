@@ -16,7 +16,11 @@
             $_SESSION['nome'] = $clientes['nome'];
             $_SESSION['email'] = $clientes['email'];
             $_SESSION['codigo'] = $clientes['codigo'];
+            $_SESSION['cpf'] = $clientes['cpf'];
+            $_SESSION['telefone'] = $clientes['telefone'];
+            $_SESSION['nascto'] = $clientes['nascto'];
             $_SESSION['foto'] = $clientes['fotoUrl'];
+            $_SESSION['sexo'] = $clientes['sexo'];
             $msg = "<p class=green>Sessão Iniciada</p>";
 
             if($clientes['codigo'] == 1){

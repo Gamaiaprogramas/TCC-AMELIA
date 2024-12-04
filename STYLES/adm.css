@@ -63,6 +63,10 @@ main {
     height:75vh;
     width: 60vh;
 }
+.imageCard img{
+    height: 100%;
+    width: 70vh;
+}
 
 .infoProd{
 
