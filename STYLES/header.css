@@ -96,6 +96,7 @@ header div {
 header div img {
     height: 8vh;
     cursor: pointer;
+    border-radius: 10%;
 }
 
 .Pesquisar {

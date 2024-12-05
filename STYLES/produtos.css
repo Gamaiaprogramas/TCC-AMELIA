@@ -1,94 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
 header {
-  background-color: #333; /* Cor de fundo opcional */
-  padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vh;
+    height: 13vh;
+    background-color: #fff;
+    align-items: center;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between; /* Distribui os itens no canto esquerdo, centro e direito */
-  align-items: center; /* Alinha verticalmente */
-  list-style: none; /* Remove as bolinhas padrão das listas */
-  margin: 0;
-  padding: 0;
+.divConteudoConteudo{
+  margin: 2%;
 }
 
-/* Estilo dos itens do header */
-.header li {
-  display: flex;
-  align-items: center;
-}
-
-.logo img,
-.perfil img {
-  width: 50px; /* Ajuste do tamanho da imagem */
-  height: 50px;
-  border-radius: 50%; /* Deixa as imagens redondas */
-  object-fit: cover; /* Mantém a proporção da imagem */
-}
-
-.meus-produtos input {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 300px; /* Largura do campo de texto */
-  font-size: 14px;
-}
-
-.meus-produtos {
-  flex: 1; /* Faz o item do meio ocupar espaço central */
-  display: flex;
-  justify-content: center; /* Centraliza o input */
-}
-
-    .carousel-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .carousel {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
+    display: flex;
+    margin: 200vh;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    transition: transform 0.7s ease-in-out;
+    width: 100%;
 }
 
 .carousel-item {
-  min-width: 25%; /* Mostra 4 itens de uma vez */
-  text-align: center;
-  box-sizing: border-box;
-  padding: 10px;
+    display: flex;
+    min-width: 100%;
+    height: 100%;
 }
 
 .carousel-item img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Ajusta a largura para 100% para preencher o item */
 }
 
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 2;
-  border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 3vh;
+    cursor: pointer;
 }
 
-.carousel-btn.prev {
-  left: 10px;
+.prev {
+    left: 10px;
 }
 
-.carousel-btn.next {
-  right: 10px;
+.next {
+    right: 10px;
 }
 
 .carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn:focus {
+    outline: none;
+}
+
+/* Ajuste para o conteúdo centralizado */
+.carousel-container .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divConteudoConteudo {
+  margin-left: 27%;
+}
+
+.divConteudoConteudo a {
+  color: #ffc300;
+}
+
+.divConteudoConteudo h1 {
+  margin: 1%;
+  color: #001d5b;
+}
+
+.divConteudoConteudo h2 {
+  color: #001d5b;
 }
