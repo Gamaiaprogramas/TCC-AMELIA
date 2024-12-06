@@ -118,13 +118,12 @@
 
 }
 
-.espacoCamisa{
-    width: 100%;
-
-    justify-content: center;
-    scroll-behavior: smooth;
+.espacoCamisa {
     display: flex;
     align-items: center;
+    width: 100%;
+    overflow: hidden; /* Evita que elementos vazem do container */
+    gap: 0;
 }
 .espacoBtnEsquerda, .espacoBtnDireita{
     width: 10%;
@@ -144,32 +143,45 @@
     font-size: 2vh;
    
 }
-.espacoBtnEsquerda button:hover , .espacoBtnDireita button:hover{
- transform: scale(1.1);
+.espacoBtnEsquerda button, .espacoBtnDireita button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.containerCamisa{
 
+.espacoBtnEsquerda button:hover, .espacoBtnDireita button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.containerCamisa {
     display: flex;
-    overflow-y: hidden;
-    overflow-x: hidden; /* Permite rolagem horizontal */
-    scroll-behavior: smooth;
+    overflow-x: auto; /* Apenas rolagem horizontal */
+    overflow-y: hidden; /* Impede rolagem vertical */
+    scroll-behavior: smooth; /* Rolagem suave */
     width: 80%;
     height: auto;
     gap: 0 20vh;
     justify-content: space-around;
-    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /* Encaixe no item */
 }
 
-.camisaDivimg{
-    display: flex;
-    
-    flex-direction: column;
+.containerCamisa::-webkit-scrollbar {
+    display: none; /* Remove a barra de rolagem para navegadores baseados em WebKit */
 }
-.camisaDivimg img{
-    height:50vh;
-    
+
+.containerCamisaUnico {
+    scroll-snap-align: center; /* Alinha o item no centro */
+    flex-shrink: 0; /* Garante que os itens não diminuam além do tamanho especificado */
+    width: 40vh; /* Define largura para evitar overflow */
+    height: auto; /* Ajusta altura automaticamente */
+    transition: transform 0.3s ease-in-out; /* Suavização */
+}
+
+
+
+.camisaDivimg img {
+    height: 50vh;
     width: 40vh;
 }
+
 
 .camisaDivimg h1{
     position: fixed;

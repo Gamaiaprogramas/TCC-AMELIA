@@ -28,7 +28,7 @@ header {
 
 .carousel {
     display: flex;
-    margin: 200vh;
+    margin: 170vh;
     margin-bottom: 10%;
     margin-top: 10%;
     transition: transform 0.7s ease-in-out;
@@ -42,7 +42,7 @@ header {
 }
 
 .carousel-item img {
-    width: 30%; /* Ajusta a largura para 100% para preencher o item */
+    width: 40%; /* Ajusta a largura para 100% para preencher o item */
 }
 
 .carousel-btn {

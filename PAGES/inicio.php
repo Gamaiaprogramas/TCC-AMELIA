@@ -149,86 +149,71 @@ include("../PARTIALS/header.php");
         </div>
        
         <div class="Camisa">
-            <div class="Titulo2">
-                <h1>Camisas Masculinas!</h1>
-            </div>
-            <div class="espacoCamisa">
-                <div class="espacoBtnEsquerda">
-                    <button class="btnEsquerda" onclick="direcao2(1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
-                </div>
-
-                <div class="containerCamisa" id="container2">
-
-                <?php 
-  $produtos = mysqli_query($con, "SELECT * FROM `produtos` WHERE generoPro = 'Masculina' ");
-
-  while($produto = mysqli_fetch_assoc($produtos)) {
-
-
-                   echo "<div class='containerCamisaUnico'>";
-                    echo "<div class='camisaDivimg'>";
-                       echo " <img src='{$produto['fotoProduto']}' alt=''>";
-                       echo " <h1>{$produto['precoProduto']}</h1>";
-                   echo " </div>";
-                   echo " <div class = 'camisaTexto'>";
-                   echo " <h1>{$produto['nomeCamisa']} - {$produto['timeProduto']}</h1>";
-                   echo " <button>Adicionar ao carrinho</button> ";
-                   echo " </div> ";
-                echo " </div>";
-
-
-                }
-
-            ?>
-            </div>
-
-                <div class="espacoBtnDireita">
-                    <button class="btnDireita" onclick="direcao2(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
-                </div>
-            </div>
-           
+    <div class="Titulo2">
+        <h1>Camisas Masculinas!</h1>
+    </div>
+    <div class="espacoCamisa">
+        <div class="espacoBtnEsquerda">
+            <button class="btnEsquerda" onclick="direcao('carouselMasculinas', 1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
         </div>
-      
-        <div class="Camisa">
-            <div class="Titulo1">
-                <h1>Camisas Femininas!</h1>
-            </div>
-            <div class="espacoCamisa">
-                <div class="espacoBtnEsquerda">
-                    <button class="btnEsquerda" onclick="direcao(1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
-                </div>
 
-                <div class="containerCamisa">
-
-                <?php 
-  $produtos = mysqli_query($con, "SELECT * FROM `produtos` WHERE generoPro = 'Feminina' ");
-
-  while($produto = mysqli_fetch_assoc($produtos)) {
-
-
-                   echo "<div class='containerCamisaUnico'>";
+        <div class="containerCamisa" id="carouselMasculinas">
+            <?php 
+                $produtos = mysqli_query($con, "SELECT * FROM `produtos` WHERE generoPro = 'Masculina'");
+                while($produto = mysqli_fetch_assoc($produtos)) {
+                    echo "<a href='../PAGES/mostrarProd.php?cod={$produto['codProduto']}'><div class='containerCamisaUnico'>";
                     echo "<div class='camisaDivimg'>";
-                       echo " <img src='{$produto['fotoProduto']}' alt=''>";
-                       echo " <h1>{$produto['precoProduto']}</h1>";
-                   echo " </div>";
-                   echo " <div class = 'camisaTexto'>";
-                   echo " <h1>{$produto['nomeCamisa']} - {$produto['timeProduto']}</h1>";
-                   echo " <button>Adicionar ao carrinho</button> ";
-                   echo " </div> ";
-                echo " </div>";
-
-
+                    echo " <img src='{$produto['fotoProduto']}' alt=''>";
+                    echo " <h1>{$produto['precoProduto']}</h1>";
+                    echo " </div>";
+                    echo " <div class = 'camisaTexto'>";
+                    echo " <h1>{$produto['nomeCamisa']} - {$produto['timeProduto']}</h1>";
+                    echo " <button>Adicionar ao carrinho</button> ";
+                    echo " </div> ";
+                    echo " </div></a>";
                 }
-
             ?>
-                </div>
-
-                <div class="espacoBtnDireita">
-                    <button class="btnDireita" onclick="direcao(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
-                </div>
-            </div>
-           
         </div>
+
+        <div class="espacoBtnDireita">
+            <button class="btnDireita" onclick="direcao('carouselMasculinas', 2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="Camisa">
+    <div class="Titulo1">
+        <h1>Camisas Femininas!</h1>
+    </div>
+    <div class="espacoCamisa">
+        <div class="espacoBtnEsquerda">
+            <button class="btnEsquerda" onclick="direcao('carouselFemininas', 1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
+        </div>
+
+        <div class="containerCamisa" id="carouselFemininas">
+            <?php 
+                $produtos = mysqli_query($con, "SELECT * FROM `produtos` WHERE generoPro = 'Feminina'");
+                while($produto = mysqli_fetch_assoc($produtos)) {
+                    echo "<a href='../PAGES/mostrarProd.php?cod={$produto['codProduto']}'><div class='containerCamisaUnico'>";
+                    echo "<div class='camisaDivimg'>";
+                    echo " <img src='{$produto['fotoProduto']}' alt=''>";
+                    echo " <h1>{$produto['precoProduto']}</h1>";
+                    echo " </div>";
+                    echo " <div class = 'camisaTexto'>";
+                    echo " <h1>{$produto['nomeCamisa']} - {$produto['timeProduto']}</h1>";
+                    echo " <button>Adicionar ao carrinho</button> ";
+                    echo " </div> ";
+                    echo " </div></a>";
+                }
+            ?>
+        </div>
+
+        <div class="espacoBtnDireita">
+            <button class="btnDireita" onclick="direcao('carouselFemininas', 2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+        </div>
+    </div>
+</div>
+
 
     </main>
     <?php
