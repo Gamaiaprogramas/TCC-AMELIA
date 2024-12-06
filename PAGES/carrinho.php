@@ -51,7 +51,7 @@
                 }
             }
             echo "<div class ='compra'>";
-            echo "<a href='finalizarCompra.php'><button>Finalizar Compra</button></a>";
+            echo "<a href='../PAGES/finalizarCompra.php'><button>Finalizar Compra</button></a>";
         } else {
             echo "<p>Seu carrinho está vazio.</p>";
         }
