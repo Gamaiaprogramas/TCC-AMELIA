@@ -68,9 +68,7 @@
                     <div class="btnAnalise">
                         <a href="../PAGES/gui.php">Meus pedidos!</a>
                     </div>
-                    <div class="btnAnalise">
-                        <a href="../PAGES/dashboard.php" >Excluir conta</a>
-                    </div>
+                  
             </div>
         </div>
     </div>

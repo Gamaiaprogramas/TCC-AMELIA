@@ -13,7 +13,8 @@ include("../PARTIALS/header.php");
                 <div class="divConteudoConteudo">
                     <h1>A MELHOR LOJA DE CAMISAS DE TIME!</h1>
                     <h2>Aqui na Mantos F.C presamos por qualidade, rapidez e excelência em nossos serviços. Venha fazer parte do time!</h2>
-                    <button>Compre Camisas</button>
+                    <a href="../PAGES/pesquisar.php?termo=+">
+                    <button>Compre Camisas</button></a>
                     <section></section>
                 </div>
             </div>

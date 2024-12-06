@@ -75,7 +75,118 @@ CREATE TABLE IF NOT EXISTS `pedidos` (
 
 INSERT INTO `pedidos` (`numeroPedido`, `clientePedido`, `dataPedido`, `itensPedido`, `precoPedido`) VALUES
 (1, 0, '2024-06-19', '2', 349),
-(2, 0, '2024-06-21', '7, 1', 648);
+(2, 0, '2024-06-21', '7, 1', 648);<?php
+session_start();
+require('../ACTS/connect.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seus Pedidos</title>
+    <link rel="stylesheet" href="../STYLES/carrinho.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../PICS/imgsMantos/logoPequena.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="carrinhoDiv">
+        <nav>
+            <a href="../PAGES/inicio.php"><img src="../PICS/imgsMantos/logoAlternativa.svg" alt=""></a>
+            <h2>Seus Pedidos</h2>
+            <?php
+            echo "<a href='../PAGES/perfil.php'><img src='{$_SESSION['foto']}'></a>";
+            ?>
+        </nav>
+
+        <!-- Carrossel de Pedidos -->
+        <div class="carousel-container">
+            <button class="carousel-btn prev">❮</button>
+            <div class="carousel">
+                <?php
+                if (isset($_SESSION['codigo'])) {
+                    $usuario_cod = $_SESSION['codigo'];
+
+                    // Consulta para obter os pedidos do usuário
+                    $query = "SELECT * FROM `pedidos` WHERE clientePedido = '$usuario_cod'";
+                    $resultado = mysqli_query($con, $query);
+
+                    if (mysqli_num_rows($resultado) > 0) {
+                        while ($pedido = mysqli_fetch_assoc($resultado)) {
+                            echo "<div class='carousel-item'>";
+                            echo "<div class='pedido'>";
+                            echo "<h3>Pedido Número: {$pedido['numeroPedido']}</h3>";
+                            echo "<p><strong>Data:</strong> {$pedido['dataPedido']}</p>";
+
+                            // Converter códigos dos itens para nomes
+                            $itens = explode(", ", $pedido['itensPedido']);
+                            $nomesItens = [];
+                            foreach ($itens as $codItem) {
+                                $queryProduto = "SELECT nomeCamisa FROM `produtos` WHERE codProduto = '$codItem'";
+                                $resultadoProduto = mysqli_query($con, $queryProduto);
+                                if (mysqli_num_rows($resultadoProduto) == 1) {
+                                    $produto = mysqli_fetch_assoc($resultadoProduto);
+                                    $nomesItens[] = $produto['nomeCamisa'];
+                                } else {
+                                    $nomesItens[] = "Item Desconhecido (Código: $codItem)";
+                                }
+                            }
+                            $nomesItensStr = implode(", ", $nomesItens);
+                            echo "<p><strong>Itens:</strong> $nomesItensStr</p>";
+                            echo "<p><strong>Total:</strong> R$ {$pedido['precoPedido']}</p>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                    } else {
+                        echo "<div class='carousel-item'><p>Você não tem pedidos.</p></div>";
+                    }
+                }
+                ?>
+            </div>
+            <button class="carousel-btn next">❯</button>
+        </div>
+
+        <a href="../PAGES/inicio.php"><p>Continuar comprando</p></a>
+    </div>
+
+    <!-- Script do Carrossel -->
+    <script>
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const carousel = document.querySelector('.carousel');
+        const items = document.querySelectorAll('.carousel-item');
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            items.forEach((item, index) => {
+                item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+
+        // Atualiza o carrossel inicialmente
+        updateCarousel();
+    </script>
+
+</body>
+
+</html>
+
 
 -- --------------------------------------------------------
 

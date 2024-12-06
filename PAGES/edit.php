@@ -34,6 +34,10 @@
                 <p>Email:</p>
                 <input type="text" name="email"  value=" <?php echo $usuario['email'] ?>">
             </label>
+            <label for="telefone">
+                <p>telefone:</p>
+                <input type="text" name="telefone"  value=" <?php echo $usuario['telefone'] ?>">
+            </label>
             <label for="cpf">
                 <p>cpf: </p>
                 <input type="text"  name="cpf" value="<?php echo $usuario['cpf'] ?>">

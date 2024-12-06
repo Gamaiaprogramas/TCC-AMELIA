@@ -23,7 +23,7 @@
     `sexo`= '$sexo',
     `telefone` = '$telefone',
     `nascto` = '$nascto', 
-    `time` = '$time',
+  
     `fotoUrl` = '$fotoUrl'
     WHERE `codigo` = '$codigo';");
 
